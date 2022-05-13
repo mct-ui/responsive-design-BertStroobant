@@ -2,6 +2,20 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff") format("woff"),
+         url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff") format("woff"),
+         url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2");
+}
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -26,6 +40,12 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
 }
 
 /*
@@ -61,6 +81,11 @@ img {
     ---
     Default markup for typographic elements
 */
+h1,
+h2,
+h3 {
+    font-weight: 200;
+}
 
 h1 {
     font-size: 36px;
@@ -182,6 +207,7 @@ a:focus {
         padding-top: 72px;
         padding-bottom: 48px;
     }
+
 }
 
 /*
@@ -317,6 +343,27 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .c-logo__symbol {
+        height: 40px;
+    }
+}
+
 
 /*------------------------------------*\
   #UTILITIES
